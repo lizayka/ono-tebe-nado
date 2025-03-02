@@ -1,1 +1,32 @@
-/* место для вашего кода */
+.header {
+  padding: 92px 24px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 148px 2fr;
+  font-size: 18px;
+}
+
+.header__navigation {
+  display: flex;
+  justify-self: center;
+  gap: 13px;
+  line-height: 21.13px;
+}
+
+.header__navigation .is-active {
+  text-decoration: none;
+}
+
+.header__logo {
+  width: 148px;
+  height: 105px;
+  justify-self: center;
+}
+
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  line-height: 24.3px;
+  padding-right: 26px;
+}
