@@ -193,28 +193,34 @@
 .about {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  grid-template-areas:
+    "logo title"
+    ". text";
   padding-left: 24px;
   padding-right: 24px;
+  padding-top: 10px;
   margin-bottom: 180px;
 }
 
 .about__logo {
   display: flex;
+  align-items: start;
+  justify-content: center;
   min-height: 100%;
   min-width: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   padding-top: 35px;
 }
 
 .about__logo-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  grid-area: logo;
   height: 240px;
   width: 240px;
   border-radius: 50%;
   background-color: rgba(0 0 0);
-  padding-top: 65.25px;
-  padding-left: 50.89px;
 }
 
 .about__logo-img {
@@ -223,27 +229,27 @@
 }
 
 .about__title {
-  padding-top: 136px;
-  padding-bottom: 100px;
   font-size: 40px;
   font-weight: 700;
   line-height: 47px;
+  grid-area: title;
+  align-self: center;
 }
 
 .about__text {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
-}
-
-.about__text-space {
-  margin-bottom: 24px;
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .footer {
-padding: 0 50px 88px 50px;
-display: flex;
-justify-content: space-between;
+  padding: 0 50px 88px 50px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .footer__link {
@@ -253,8 +259,7 @@ justify-content: space-between;
 
 .footer__social-links {
   display: flex;
-  width: 240px;
-  justify-content: space-between;
+  gap: 48px;
 }
 
 .footer__navigation {
@@ -267,4 +272,3 @@ justify-content: space-between;
 .footer__navigation .is-active {
   text-decoration: none;
 }
-
